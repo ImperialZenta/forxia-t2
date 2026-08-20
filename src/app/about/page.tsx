@@ -28,6 +28,7 @@ const credentials = [
   "Certificate, Organizational Coaching & Leadership",
   "Certificate, Applied Business Analysis",
   "Professional Certified Coach (PCC)",
+  "Mentor Coach Specialization (MCS) — PCC level",
   "Certified Enterprise Coach (CEC) & Certified Team Coach (CTC)",
   "Certified SAFe Program Consultant & Professional Scrum Master",
 ];

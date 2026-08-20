@@ -9,6 +9,13 @@ const certificationBadges = [
       "https://coachingfederation.org/credentialing/icf-credentials/find-a-coach/",
   },
   {
+    name: "Mentor Coach Specialization (MCS)",
+    issuer: "International Coaching Federation · PCC level",
+    image: "/credentials/icf-mcs-pcc.png",
+    verifyUrl:
+      "https://www.credly.com/badges/8d13600f-0f5d-4bf5-be26-a994eabe564e/public_url",
+  },
+  {
     name: "Certified Team Coach (CTC)",
     issuer: "Scrum Alliance",
     image: "/credentials/scrum-alliance-ctc.png",
@@ -31,7 +38,7 @@ export function CredentialBadges() {
       <p className="mt-2 text-sm text-navy-600">
         Official marks for active coaching certifications.
       </p>
-      <ul className="mt-6 grid gap-8 sm:grid-cols-3">
+      <ul className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {certificationBadges.map((badge) => (
           <li key={badge.name} className="flex flex-col items-center text-center">
             <a
