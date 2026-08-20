@@ -8,28 +8,44 @@ export const metadata: Metadata = {
   description: `Learn about ${siteConfig.founder.name} and who ${siteConfig.name} helps.`,
 };
 
+const careerPositions = [
+  "Senior Manager, Agile Delivery Practice",
+  "Founder & Agile Coach, Forxia Coaching and Consulting",
+  "Principal Agile Coach",
+  "Agile Coach — enterprise programs & DevOps transformation",
+  "Manager of Quality, Scrum Master & Agile Coach",
+  "Business Analyst, Product Owner & Agile Adoption Catalyst",
+  "Business Analyst & Project Manager",
+  "Project Manager, Team Coach & Educator",
+  "Product Manager",
+  "Problem Management Engineer & Systems Analyst",
+];
+
 const credentials = [
-  "15+ years in strategy, operations, and leadership advisory",
-  "Former executive roles at high-growth startups and Fortune 500 companies",
-  "MBA, certified in change management (Prosci)",
-  "Trusted by founders, COOs, and executive teams across SaaS, professional services, and healthcare",
+  "30+ years leading delivery, analysis, product, and transformation work",
+  "BSc, Computer Science — Software Design",
+  "Certificate, Organizational Coaching & Leadership",
+  "Certificate, Applied Business Analysis",
+  "Certified Enterprise Coach (CEC) & Certified Team Coach (CTC)",
+  "Certified SAFe Program Consultant & Professional Scrum Master",
+  "Associate Certified Coach (ACC) & Certified Scrum Product Owner",
 ];
 
 const whoIHelp = [
   {
-    title: "Founders & CEOs",
+    title: "Directors",
     description:
-      "Scaling past product-market fit, preparing for fundraising, or navigating first-time executive team builds.",
+      "Leading a portfolio, program, or function through a delivery or operating-model shift—and need an experienced partner to align teams, clarify priorities, and keep momentum.",
   },
   {
-    title: "Operations leaders",
+    title: "Vice Presidents",
     description:
-      "Optimizing processes, improving cross-functional alignment, and building systems that scale without chaos.",
+      "Scaling change across multiple teams or departments, where executive sponsorship, cross-functional alignment, and measurable progress matter as much as the playbook.",
   },
   {
-    title: "Executive teams",
+    title: "Senior leadership teams",
     description:
-      "Facilitating strategic planning, OKR cycles, and high-stakes decisions where alignment matters.",
+      "Building internal coaching capability, improving team health at scale, and embedding agile and systemic practices beyond software delivery alone.",
   },
 ];
 
@@ -39,7 +55,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title={`Hi, I'm ${siteConfig.founder.name}`}
-        description={`${siteConfig.founder.title} at ${siteConfig.name}. I help leaders cut through complexity and build strategies their teams can actually execute.`}
+        description={`${siteConfig.founder.title} at ${siteConfig.name}. I work with directors and vice presidents who need sharper delivery, stronger alignment, and practical ways to move complex initiatives forward.`}
         primaryCta={{ label: "Work with me", href: "/contact" }}
         secondaryCta={{ label: "View services", href: "/services" }}
       />
@@ -64,35 +80,70 @@ export default function AboutPage() {
               <h2 className="heading-section text-center lg:text-left">Background</h2>
               <div className="mt-6 space-y-4 text-navy-600 leading-relaxed">
                 <p>
-                  I started my career in management consulting before moving into
-                  operating roles—leading strategy, product, and operations at companies
-                  from early-stage startups to established enterprises. That dual
-                  perspective means I understand both the boardroom and the day-to-day
-                  realities of execution.
+                  My career spans more than three decades—from systems and problem
+                  management engineering through product management, business analysis,
+                  and senior agile leadership. That path gives me a rare combination:
+                  technical fluency, product and process discipline, and the coaching
+                  presence to work credibly with leaders who operate at scale.
                 </p>
                 <p>
-                  Today, I work independently with a select group of clients who value
-                  direct access to senior expertise, honest feedback, and practical
-                  frameworks—not bloated teams or recycled playbooks.
+                  I have served as a senior manager of an agile delivery practice,
+                  principal agile coach, scrum master, product owner, and business
+                  analyst—often where strategy, program execution, and people systems
+                  intersect. Since 2011 I have led Forxia Coaching and Consulting,
+                  partnering with leaders and teams on systemic coaching, facilitation,
+                  training, and delivery improvement.
                 </p>
                 <p>
-                  My approach is collaborative and outcomes-focused. We define success
-                  upfront, move quickly, and measure progress against clear milestones.
+                  Directors and vice presidents come to me when they need more than
+                  a framework slide deck: program-level facilitation, honest assessment
+                  of team and organizational health, help standing up internal coaching
+                  capability, and support extending agile practices into functions
+                  well beyond technology. My work is direct, collaborative, and
+                  anchored in outcomes you can track.
                 </p>
               </div>
 
               <div className="card mt-10">
-                <h3 className="text-lg font-semibold text-navy-900">Credentials</h3>
-                <ul className="mt-4 space-y-3">
-                  {credentials.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm text-navy-700">
-                      <span className="text-gold-600" aria-hidden="true">
-                        ✓
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-lg font-semibold text-navy-900">
+                  Positions & credentials
+                </h3>
+                <p className="mt-2 text-sm text-navy-600">
+                  Selected roles and qualifications—focused on the work, not the logo
+                  on the business card.
+                </p>
+                <div className="mt-6 grid gap-8 md:grid-cols-2">
+                  <div>
+                    <h4 className="text-sm font-semibold uppercase tracking-wide text-gold-700">
+                      Career positions
+                    </h4>
+                    <ul className="mt-3 space-y-2">
+                      {careerPositions.map((item) => (
+                        <li key={item} className="flex gap-2 text-sm text-navy-700">
+                          <span className="text-gold-600" aria-hidden="true">
+                            •
+                          </span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold uppercase tracking-wide text-gold-700">
+                      Education & certifications
+                    </h4>
+                    <ul className="mt-3 space-y-2">
+                      {credentials.map((item) => (
+                        <li key={item} className="flex gap-2 text-sm text-navy-700">
+                          <span className="text-gold-600" aria-hidden="true">
+                            ✓
+                          </span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -104,8 +155,10 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <h2 className="heading-section">Who I help</h2>
             <p className="text-lead mt-4">
-              I partner with leaders who are ready to invest in clarity—whether
-              that means a focused assessment or ongoing strategic support.
+              I partner with senior leaders who own delivery results—not just
+              presentations about them. Whether you need a focused consultation or
+              sustained advisory support, the goal is the same: clarity, alignment,
+              and forward motion.
             </p>
           </div>
 

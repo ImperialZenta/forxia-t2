@@ -4,9 +4,9 @@
  */
 export const siteConfig = {
   name: "Forxia Coaching and Consulting",
-  tagline: "Strategic clarity for ambitious leaders",
+  tagline: "Coaching and consulting for directors and vice presidents",
   description:
-    "Management consulting that turns complex challenges into actionable growth strategies for founders, executives, and growing teams.",
+    "Agile coaching and consulting for senior leaders—strengthening delivery, alignment, and organizational capability across complex programs and teams.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 
   contact: {
@@ -15,7 +15,7 @@ export const siteConfig = {
 
   founder: {
     name: "Andrew",
-    title: "Principal Consultant",
+    title: "Principal Consultant & Coach",
   },
 
   nav: [
