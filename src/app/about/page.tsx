@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { CredentialBadges } from "@/components/CredentialBadges";
 import { PageHero } from "@/components/PageHero";
 import { siteConfig } from "@/config/site";
 
@@ -26,9 +27,9 @@ const credentials = [
   "BSc, Computer Science — Software Design",
   "Certificate, Organizational Coaching & Leadership",
   "Certificate, Applied Business Analysis",
+  "Professional Certified Coach (PCC)",
   "Certified Enterprise Coach (CEC) & Certified Team Coach (CTC)",
   "Certified SAFe Program Consultant & Professional Scrum Master",
-  "Associate Certified Coach (ACC) & Certified Scrum Product Owner",
 ];
 
 const whoIHelp = [
@@ -144,6 +145,7 @@ export default function AboutPage() {
                     </ul>
                   </div>
                 </div>
+                <CredentialBadges />
               </div>
             </div>
           </div>
