@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { siteConfig } from "@/config/site";
 
@@ -44,41 +45,56 @@ export default function AboutPage() {
       />
 
       <section className="section-padding">
-        <div className="container-page grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h2 className="heading-section">Background</h2>
-            <div className="mt-6 space-y-4 text-navy-600 leading-relaxed">
-              <p>
-                I started my career in management consulting before moving into
-                operating roles—leading strategy, product, and operations at companies
-                from early-stage startups to established enterprises. That dual
-                perspective means I understand both the boardroom and the day-to-day
-                realities of execution.
-              </p>
-              <p>
-                Today, I work independently with a select group of clients who value
-                direct access to senior expertise, honest feedback, and practical
-                frameworks—not bloated teams or recycled playbooks.
-              </p>
-              <p>
-                My approach is collaborative and outcomes-focused. We define success
-                upfront, move quickly, and measure progress against clear milestones.
-              </p>
+        <div className="container-page">
+          <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-14">
+            <div className="shrink-0">
+              <div className="relative h-52 w-52 overflow-hidden rounded-full border-4 border-gold-400/70 shadow-lg sm:h-60 sm:w-60">
+                <Image
+                  src="/andrew-portrait.png"
+                  alt={`Portrait of ${siteConfig.founder.name}`}
+                  fill
+                  sizes="(max-width: 640px) 208px, 240px"
+                  className="object-cover object-[center_18%]"
+                  priority
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="card h-fit">
-            <h3 className="text-lg font-semibold text-navy-900">Credentials</h3>
-            <ul className="mt-4 space-y-3">
-              {credentials.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-navy-700">
-                  <span className="text-gold-600" aria-hidden="true">
-                    ✓
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="flex-1">
+              <h2 className="heading-section text-center lg:text-left">Background</h2>
+              <div className="mt-6 space-y-4 text-navy-600 leading-relaxed">
+                <p>
+                  I started my career in management consulting before moving into
+                  operating roles—leading strategy, product, and operations at companies
+                  from early-stage startups to established enterprises. That dual
+                  perspective means I understand both the boardroom and the day-to-day
+                  realities of execution.
+                </p>
+                <p>
+                  Today, I work independently with a select group of clients who value
+                  direct access to senior expertise, honest feedback, and practical
+                  frameworks—not bloated teams or recycled playbooks.
+                </p>
+                <p>
+                  My approach is collaborative and outcomes-focused. We define success
+                  upfront, move quickly, and measure progress against clear milestones.
+                </p>
+              </div>
+
+              <div className="card mt-10">
+                <h3 className="text-lg font-semibold text-navy-900">Credentials</h3>
+                <ul className="mt-4 space-y-3">
+                  {credentials.map((item) => (
+                    <li key={item} className="flex gap-3 text-sm text-navy-700">
+                      <span className="text-gold-600" aria-hidden="true">
+                        ✓
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
