@@ -1,10 +1,12 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { TaglineCarousel } from "@/components/TaglineCarousel";
 
 interface PageHeroProps {
   eyebrow?: string;
   title: string;
-  description?: string;
+  description?: ReactNode;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
 }
@@ -28,7 +30,11 @@ export function PageHero({
         ) : null}
         <h1 className="heading-display max-w-3xl text-white">{title}</h1>
         {description ? (
-          <p className="text-lead mt-6 max-w-2xl text-navy-300">{description}</p>
+          typeof description === "string" ? (
+            <p className="text-lead mt-6 max-w-2xl text-navy-300">{description}</p>
+          ) : (
+            <div className="mt-6">{description}</div>
+          )
         ) : null}
         {(primaryCta || secondaryCta) && (
           <div className="mt-10 flex flex-wrap gap-4">
@@ -57,7 +63,7 @@ export function HomeHero() {
     <PageHero
       eyebrow={siteConfig.name}
       title="Cut complexity. Build clarity. Move faster."
-      description="Senior advisory for leadership teams stuck in coordination drag. We bust complexity, stand up product capability, and reshape how teams work together."
+      description={<TaglineCarousel variant="hero" />}
       primaryCta={{ label: "Get in touch", href: "/contact" }}
       secondaryCta={{ label: "View services", href: "/services" }}
     />

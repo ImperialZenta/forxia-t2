@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 import { journeys, getJourneyHref } from "@/lib/journeys";
 
 export function JourneyExplorer() {
+  if (!siteConfig.features.journeys) {
+    return null;
+  }
+
   return (
     <section
       aria-labelledby="explore-journeys-heading"

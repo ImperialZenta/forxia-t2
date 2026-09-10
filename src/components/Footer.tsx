@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TaglineCarousel } from "@/components/TaglineCarousel";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
@@ -10,7 +11,9 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <p className="text-lg font-semibold text-white">{siteConfig.name}</p>
-            <p className="mt-2 text-sm leading-relaxed text-gold-200/80">{siteConfig.tagline}</p>
+            <div className="mt-2">
+              <TaglineCarousel variant="footer" />
+            </div>
           </div>
 
           <div>

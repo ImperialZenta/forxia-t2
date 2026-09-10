@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { JourneyExplorer } from "@/components/JourneyExplorer";
+import { siteConfig } from "@/config/site";
 import { getJourneyBySlug, journeys } from "@/lib/journeys";
 
 interface JourneyPageProps {
@@ -10,10 +11,18 @@ interface JourneyPageProps {
 }
 
 export function generateStaticParams() {
+  if (!siteConfig.features.journeys) {
+    return [];
+  }
+
   return journeys.map((journey) => ({ slug: journey.slug }));
 }
 
 export async function generateMetadata({ params }: JourneyPageProps): Promise<Metadata> {
+  if (!siteConfig.features.journeys) {
+    return { title: "Not found" };
+  }
+
   const { slug } = await params;
   const journey = getJourneyBySlug(slug);
 
@@ -28,6 +37,10 @@ export async function generateMetadata({ params }: JourneyPageProps): Promise<Me
 }
 
 export default async function JourneyPage({ params }: JourneyPageProps) {
+  if (!siteConfig.features.journeys) {
+    notFound();
+  }
+
   const { slug } = await params;
   const journey = getJourneyBySlug(slug);
 
