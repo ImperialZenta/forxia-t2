@@ -13,7 +13,7 @@ interface TaglineCarouselProps {
 }
 
 export function TaglineCarousel({ variant }: TaglineCarouselProps) {
-  const taglines = siteConfig.taglines;
+  const taglines: readonly string[] = siteConfig.taglines;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [hidden, setHidden] = useState(false);
