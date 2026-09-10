@@ -40,7 +40,7 @@ export const audienceDescriptions: Record<Audience, string> = {
     "Diagnostics and delivery immersion for organizations that need clearer value delivery.",
   team: "Coaching and facilitation so teams deliver value with less coordination drag.",
   individual:
-    "1:1 coaching, Leadership Agility 360, Scrum Master and Product Owner training, and consultation for senior professionals.",
+    "1:1 coaching, a coaching program session, Leadership Agility 360, Scrum Master and Product Owner training, and consultation for senior professionals.",
 };
 
 export const audiencePageCopy: Record<
@@ -60,7 +60,7 @@ export const audiencePageCopy: Record<
   individual: {
     title: "Services for individuals",
     description:
-      "1:1 coaching, Leadership Agility 360, Scrum Master and Product Owner training, and consultation for leaders investing in their own growth and impact.",
+      "1:1 coaching, a coaching program session, Leadership Agility 360, Scrum Master and Product Owner training, and consultation for leaders investing in their own growth and impact.",
   },
 };
 
@@ -196,6 +196,25 @@ export const services: Service[] = [
       "One conversation usually lasts three or four sessions",
       "A package if the work needs a longer arc or a defined set of sessions",
       "Organizations can reserve a block for one person or several",
+    ],
+  },
+  {
+    id: "coaching-program-session",
+    name: "Coaching Program Session",
+    description:
+      "A one-time, confidential 60-minute session with an ICF Professional Certified Coach. For people already in a coaching program, or preparing to join one, who need to experience professional coaching as part of that program’s requirements.",
+    audience: "individual",
+    modality: "coaching",
+    price: "CA $150",
+    priceLabel: "one-time · 60 minutes",
+    priceNote: "Plus tax.",
+    payment: "contact",
+    features: [
+      "Sixty-minute confidential session, by video or in person",
+      "ICF Professional Certified Coach",
+      "One session only — not a coaching package",
+      "For people in a program, or joining one, that requires this coaching",
+      "When you get in touch, tell us the program and its coaching requirement",
     ],
   },
   {

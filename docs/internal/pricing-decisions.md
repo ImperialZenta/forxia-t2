@@ -303,3 +303,33 @@ Public feature line changed from “Written notes: friction, assets, and one or 
 **Add-ons (quote separately):** extra people above 10; a second team or second day; on-site travel.
 
 **Scope protection:** hold CA $6,000 at one team, up to 10 people, one full day, short intake, and written agreements plus toolkit. Extra people, extra days, or travel expand the quote.
+
+### 2026-09-09 — Coaching Program Session
+
+- **Offer:** Coaching Program Session (`coaching-program-session`)
+- **List price:** CA $150 plus tax, one-time 60 minutes
+- **CTA:** contact / invoice, not Stripe
+- **Does not replace:** General 30 min Consultation Call (`general-consultation`); 1:1 Coaching (`individual-coaching`)
+
+**Why this product:** a gated, one-time ICF coaching hour for people already in a coaching program, or preparing to join one, who need to experience professional coaching as a program requirement. Not an entry consult and not the published 1:1 hour.
+
+**Delivery (standard session):**
+
+- One 60-minute confidential session
+- ICF Professional Certified Coach
+- Video or in person
+- One session only — not a package
+
+**Eligibility:** stated on the card. No document upload. When they get in touch, they name the program and its coaching requirement; confirm before booking.
+
+**Effort model:** one session plus light intake to confirm eligibility. This is a program-requirement SKU, not the senior PCC hour.
+
+**Rate check:** list **CA $150**. Keep the label **one-time · 60 minutes** so it does not read as the CA $550 1:1 hour.
+
+**Rejected:**
+
+- Stripe Pay now — eligibility needs a conversation before booking
+- Publishing this as a cheap 1:1 alternative — the $550 hour remains the default coaching offer
+- A package or session pack — this is a one-time program requirement
+
+**Scope protection:** hold CA $150 at one 60-minute session for someone in, or joining, a program that requires this coaching. Ongoing 1:1 work stays on the CA $550 card.
