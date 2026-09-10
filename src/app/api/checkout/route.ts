@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getPackageById } from "@/lib/packages";
+import { getServiceById } from "@/lib/services";
 import { getStripe, isStripeConfigured } from "@/lib/stripe";
 import { getStripePriceId } from "@/lib/stripe-prices";
 import { checkoutSchema } from "@/lib/validations";
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     }
 
     const { packageId } = parsed.data;
-    const pkg = getPackageById(packageId);
+    const pkg = getServiceById(packageId);
 
     if (!pkg || pkg.payment !== "stripe") {
       return NextResponse.json({ error: "Package not available for checkout" }, { status: 400 });

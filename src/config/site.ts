@@ -6,8 +6,8 @@ export const siteConfig = {
   name: "Forxia Coaching and Consulting",
   tagline: "Coaching and consulting for directors and vice presidents",
   description:
-    "Agile coaching and consulting for senior leaders—strengthening delivery, alignment, and organizational capability across complex programs and teams.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    "Senior advisory for leadership teams stuck in coordination drag. We bust complexity, stand up product capability, and reshape how teams work together.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:8000",
 
   contact: {
     calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",

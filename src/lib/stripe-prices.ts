@@ -5,8 +5,6 @@
 export function getStripePriceId(packageId: string): string | undefined {
   const priceMap: Record<string, string | undefined> = {
     "general-consultation": process.env.STRIPE_PRICE_CONSULTATION,
-    "foundation-assessment": process.env.STRIPE_PRICE_FOUNDATION,
-    "growth-retainer": process.env.STRIPE_PRICE_RETAINER,
   };
 
   return priceMap[packageId];

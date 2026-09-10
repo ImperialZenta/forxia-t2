@@ -56,8 +56,8 @@ export function HomeHero() {
   return (
     <PageHero
       eyebrow={siteConfig.name}
-      title="Turn strategy into measurable growth"
-      description={siteConfig.description}
+      title="Cut complexity. Build clarity. Move faster."
+      description="Senior advisory for leadership teams stuck in coordination drag. We bust complexity, stand up product capability, and reshape how teams work together."
       primaryCta={{ label: "Get in touch", href: "/contact" }}
       secondaryCta={{ label: "View services", href: "/services" }}
     />

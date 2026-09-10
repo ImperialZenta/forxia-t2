@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { packages } from "@/lib/packages";
+import {
+  audiences,
+  audienceDescriptions,
+  audienceLabels,
+  getAudienceHref,
+} from "@/lib/services";
 
 export function ServicesOverview() {
-  const featured = packages.filter((pkg) => pkg.payment !== "none").slice(0, 3);
-
   return (
     <section className="section-padding">
       <div className="container-page">
@@ -11,22 +14,30 @@ export function ServicesOverview() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold-600">
             Services
           </p>
-          <h2 className="heading-section mt-3">Engagements built for impact</h2>
+          <h2 className="heading-section mt-3">Find the right support</h2>
           <p className="text-lead mt-4">
-            From rapid diagnostics to ongoing advisory—choose the level of support
-            that matches where you are today.
+            Browse consulting, coaching, and learning by who you want to support:
+            your organization, a team, or yourself.
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {featured.map((pkg) => (
-            <article key={pkg.id} className="card flex flex-col">
-              <h3 className="text-xl font-semibold text-navy-900">{pkg.name}</h3>
+          {audiences.map((audience) => (
+            <Link
+              key={audience}
+              href={getAudienceHref(audience)}
+              className="card group flex flex-col transition hover:border-brand-200 hover:shadow-md"
+            >
+              <h3 className="text-xl font-semibold text-navy-900 group-hover:text-brand-800">
+                {audienceLabels[audience]}
+              </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600">
-                {pkg.description}
+                {audienceDescriptions[audience]}
               </p>
-              <p className="mt-4 text-lg font-bold text-gold-700">{pkg.price}</p>
-            </article>
+              <span className="mt-4 text-sm font-semibold text-gold-700 group-hover:text-gold-800">
+                View services →
+              </span>
+            </Link>
           ))}
         </div>
 
@@ -35,7 +46,7 @@ export function ServicesOverview() {
             Get in touch
           </Link>
           <Link href="/services" className="btn-secondary">
-            See all packages
+            Browse all services
           </Link>
         </div>
       </div>

@@ -1,0 +1,13 @@
+---
+description: Local Forxia site URL and port for browser verification. Use when opening the app, checking UI, or guessing a localhost port.
+alwaysApply: true
+---
+
+# Local site
+
+The running Forxia site is **http://localhost:8000**.
+
+- Docker publishes host **8000** to the container's Next.js port 3000 (`docker-compose.yml`).
+- Do not open `http://localhost:3000` — that port is often a different project on this machine.
+- Confirm the mapping in [README.md](README.md) (Local development) or `docker-compose.yml` (`ports: "8000:3000"`).
+- After UI, routing, or catalog changes, verify at `http://localhost:8000` (for example `/services/individuals`, `/contact`).

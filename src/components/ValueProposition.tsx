@@ -2,19 +2,19 @@ import Link from "next/link";
 
 const values = [
   {
-    title: "Clarity over complexity",
+    title: "Complexity busting",
     description:
-      "We cut through noise to identify the few decisions that actually move the needle.",
+      "We find where work gets stuck in process, politics, or priorities, and strip it back to what leaders need to decide, with coaching support so the change sticks.",
   },
   {
-    title: "Actionable from day one",
+    title: "Product office build-out",
     description:
-      "Every engagement delivers concrete next steps—not slide decks that gather dust.",
+      "We help you define product ownership, portfolio rhythm, and decision rights so product means outcomes, not just backlogs.",
   },
   {
-    title: "Partner, not vendor",
+    title: "Team topology analysis",
     description:
-      "We embed with your team, challenge assumptions respectfully, and stay accountable to outcomes.",
+      "We map how teams interact today, where handoffs and dependencies hurt flow, and what structure would serve the strategy better.",
   },
 ];
 
@@ -26,10 +26,13 @@ export function ValueProposition() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold-600">
             Why work with us
           </p>
-          <h2 className="heading-section mt-3">Consulting that respects your time</h2>
+          <h2 className="heading-section mt-3">
+            Complexity is the problem. Clarity is the work.
+          </h2>
           <p className="text-lead mt-4">
-            You need a trusted advisor who understands business reality—not generic
-            frameworks. We bring senior-level experience without enterprise overhead.
+            Forxia helps leadership teams simplify how work flows, stand up a real
+            product office, and align structure to strategy, without enterprise
+            overhead.
           </p>
         </div>
 
@@ -55,11 +58,11 @@ export function ValueProposition() {
           </p>
           <h3 className="mt-3 text-2xl font-bold">Ready to move forward?</h3>
           <p className="mx-auto mt-3 max-w-xl text-navy-300">
-            Book a consultation online or send a request through the contact form.
+            Share what you&apos;re working on using the contact form.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              Contact form
+              Get in touch
             </Link>
             <Link
               href="/services"

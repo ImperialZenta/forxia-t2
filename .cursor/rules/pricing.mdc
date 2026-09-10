@@ -1,0 +1,18 @@
+---
+description: Forxia service pricing rationale, day-rate model, and package scope caps. Use when changing prices, service cards, quotes, or Stripe vs contact CTAs.
+globs:
+  - src/lib/services.ts
+  - src/lib/stripe-prices.ts
+  - docs/internal/**
+alwaysApply: false
+---
+
+# Service pricing
+
+Before changing a published price, proposing a quote, or adding a package, read [docs/internal/pricing-decisions.md](docs/internal/pricing-decisions.md).
+
+- Treat that file as the decision registry. Do not invent prices from chat memory.
+- Published numbers belong in `src/lib/services.ts`. Rationale belongs in the registry.
+- After a pricing decision, append a dated entry. Do not rewrite history.
+- High-ticket diagnostics and workshops use `payment: "contact"`, not Stripe Pay now.
+- Keep package prices consistent with the rate model and catalog fit notes in the registry.

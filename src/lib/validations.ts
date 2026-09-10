@@ -5,6 +5,8 @@ export const contactFormSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   serviceInterest: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  /** Honeypot — real users leave this empty */
+  companyUrl: z.string().optional(),
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;

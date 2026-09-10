@@ -12,13 +12,8 @@ export const metadata: Metadata = {
 const careerPositions = [
   "Senior Manager, Agile Delivery Practice",
   "Founder & Agile Coach, Forxia Coaching and Consulting",
-  "Principal Agile Coach",
-  "Agile Coach — enterprise programs & DevOps transformation",
-  "Manager of Quality, Scrum Master & Agile Coach",
-  "Business Analyst, Product Owner & Agile Adoption Catalyst",
-  "Business Analyst & Project Manager",
-  "Project Manager, Team Coach & Educator",
-  "Product Manager",
+  "Principal Agile Coach — enterprise programs, quality & DevOps transformation",
+  "Product Manager, Business Analyst & Project Leader",
   "Problem Management Engineer & Systems Analyst",
 ];
 
@@ -31,6 +26,7 @@ const credentials = [
   "Mentor Coach Specialization (MCS) — PCC level",
   "Certified Enterprise Coach (CEC) & Certified Team Coach (CTC)",
   "Certified SAFe Program Consultant & Professional Scrum Master",
+  "Certified Leadership Agility 360 Coach",
 ];
 
 const whoIHelp = [

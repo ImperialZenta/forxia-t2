@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
-import { packages } from "@/lib/packages";
+import { services, audiences, audienceLabels } from "@/lib/services";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -26,6 +26,7 @@ export function ContactForm() {
       email: String(formData.get("email") ?? ""),
       serviceInterest: String(formData.get("serviceInterest") ?? "") || undefined,
       message: String(formData.get("message") ?? ""),
+      companyUrl: String(formData.get("companyUrl") ?? ""),
     };
 
     try {
@@ -69,6 +70,17 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="card space-y-5" noValidate>
+      <div className="honeypot" aria-hidden="true">
+        <label htmlFor="companyUrl">Company website</label>
+        <input
+          id="companyUrl"
+          name="companyUrl"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Name" htmlFor="name" required>
           <input
@@ -103,11 +115,23 @@ export function ContactForm() {
           className="input"
         >
           <option value="">Select a service (optional)</option>
-          {packages.map((pkg) => (
-            <option key={pkg.id} value={pkg.name}>
-              {pkg.name}
-            </option>
-          ))}
+          {audiences.map((audience) => {
+            const items = services.filter((service) => service.audience === audience);
+
+            if (items.length === 0) {
+              return null;
+            }
+
+            return (
+              <optgroup key={audience} label={audienceLabels[audience]}>
+                {items.map((service) => (
+                  <option key={service.id} value={service.name}>
+                    {service.name}
+                  </option>
+                ))}
+              </optgroup>
+            );
+          })}
           <option value="Other">Other</option>
         </select>
       </Field>
