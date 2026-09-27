@@ -117,6 +117,14 @@ export default function CandidatePage() {
             />
           </div>
           <p className="text-sm text-navy-500">Andrew Rose — Burnaby South–Metrotown</p>
+          <Image
+            src="/candidate-page-qr.png"
+            alt="QR code linking to https://www.forxia.com/candidate"
+            width={256}
+            height={256}
+            className="mt-2 h-56 w-56 sm:h-64 sm:w-64"
+            priority
+          />
         </div>
       </footer>
     </div>
