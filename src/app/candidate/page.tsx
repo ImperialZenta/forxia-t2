@@ -8,6 +8,8 @@ const SUPPORT_EMAIL = "andrew@forxia.com";
 
 const ONEBC_PRIORITIES_URL = "https://1bc.ca/priorities";
 const ONEBC_DONATE_URL = "https://action.1bc.ca/donate";
+const BNS_MAP_PDF_URL =
+  "https://elections.bc.ca/docs/map/redis23/ED/ED_BNS_2023.PDF";
 
 export const metadata: Metadata = {
   title: "Nomination signatures — Andrew Rose",
@@ -101,6 +103,14 @@ export default function CandidatePage() {
             >
               Donate to OneBC
             </a>
+            <a
+              href={BNS_MAP_PDF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex"
+            >
+              BNS Riding Map
+            </a>
           </div>
         </div>
       </article>
@@ -116,6 +126,13 @@ export default function CandidatePage() {
               className="object-cover object-[center_18%]"
             />
           </div>
+          <Image
+            src="/burnaby-south-metrotown-map.png"
+            alt="Map of the Burnaby South–Metrotown electoral district"
+            width={1200}
+            height={900}
+            className="w-full max-w-xl rounded-lg border border-navy-200 shadow-sm"
+          />
           <p className="text-sm text-navy-500">Andrew Rose — Burnaby South–Metrotown</p>
           <Image
             src="/candidate-page-qr.png"
