@@ -7,6 +7,7 @@ const NOMINATION_FORM_URL =
 const SUPPORT_EMAIL = "andrew@forxia.com";
 
 const ONEBC_PRIORITIES_URL = "https://1bc.ca/priorities";
+const ONEBC_DONATE_URL = "https://action.1bc.ca/donate";
 
 export const metadata: Metadata = {
   title: "Nomination signatures — Andrew Rose",
@@ -83,14 +84,24 @@ export default function CandidatePage() {
 
           <p className="text-navy-800">Thank you for your support.</p>
 
-          <a
-            href={ONEBC_PRIORITIES_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary inline-flex"
-          >
-            OneBC priorities
-          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href={ONEBC_PRIORITIES_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex"
+            >
+              OneBC priorities
+            </a>
+            <a
+              href={ONEBC_DONATE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex"
+            >
+              Donate to OneBC
+            </a>
+          </div>
         </div>
       </article>
 
