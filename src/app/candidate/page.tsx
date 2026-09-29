@@ -50,7 +50,7 @@ export default function CandidatePage() {
             To help me out, I need signatures for ballot access in the riding of{" "}
             <strong className="font-semibold text-navy-900">Burnaby South–Metrotown</strong>.
             On this page you&apos;ll find a link to an electronic form that can be filled out.
-            Please complete the form and email it to me at the address below. That would be
+            Please complete the form. That would be
             much appreciated. Please also pass it on to anyone else in the riding who may be
             willing to support ballot access.
           </p>
@@ -58,8 +58,7 @@ export default function CandidatePage() {
           <div className="card space-y-4">
             <h2 className="text-lg font-semibold text-navy-900">Electronic nomination form</h2>
             <p className="text-sm text-navy-600">
-              Open the form in a new window, fill it out, and follow the instructions to save
-              or download your completed copy.
+              Open the form in a new window and fill it out.
             </p>
             <a
               href={nominationFormUrl}
@@ -69,19 +68,16 @@ export default function CandidatePage() {
             >
               Open nomination form
             </a>
-          </div>
-
-          <div className="card space-y-2">
-            <h2 className="text-lg font-semibold text-navy-900">When you&apos;re done</h2>
             <p className="text-sm text-navy-600">
-              Email your completed form to:
+              If you have problems with the nomination form, email me at{" "}
+              <a
+                href={`mailto:${campaignEmail}`}
+                className="font-medium text-brand-700 hover:text-brand-800 underline-offset-2 hover:underline"
+              >
+                {campaignEmail}
+              </a>
+              .
             </p>
-            <a
-              href={`mailto:${campaignEmail}`}
-              className="text-lg font-semibold text-brand-700 hover:text-brand-800 underline-offset-2 hover:underline"
-            >
-              {campaignEmail}
-            </a>
           </div>
 
           <p className="text-navy-800">Thank you for your support.</p>
