@@ -123,8 +123,17 @@ export default function NominationPage() {
         </div>
       </article>
 
-      <footer className="border-t border-navy-200 bg-white py-6 text-center text-sm text-navy-500">
-        <p>Andrew Rose — Burnaby South–Metrotown</p>
+      <footer className="border-t border-navy-200 bg-white py-8 text-center">
+        <div className="container-page max-w-2xl flex flex-col items-center gap-4">
+          <p className="text-sm text-navy-500">Andrew Rose — Burnaby South–Metrotown</p>
+          <Image
+            src="/nomination-page-qr.png"
+            alt="QR code linking to https://www.forxia.com/nomination"
+            width={256}
+            height={256}
+            className="mt-2 h-56 w-56 sm:h-64 sm:w-64"
+          />
+        </div>
       </footer>
     </div>
   );
