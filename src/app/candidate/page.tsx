@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-
-const NOMINATION_FORM_URL =
-  "https://na5.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCtMd1Dp_wzf5jDKs-dmc_J6mwxMLvyC6_AEeBLcuF6rKage3odcZagQc55k01oSsg";
-
-const SUPPORT_EMAIL = "andrew@forxia.com";
+import {
+  bnsMapImagePath,
+  campaignEmail,
+  nominationFormUrl,
+} from "@/lib/candidate-campaign";
 
 const ONEBC_PRIORITIES_URL = "https://1bc.ca/priorities";
 const ONEBC_DONATE_URL = "https://action.1bc.ca/donate";
@@ -62,7 +62,7 @@ export default function CandidatePage() {
               or download your completed copy.
             </p>
             <a
-              href={NOMINATION_FORM_URL}
+              href={nominationFormUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex"
@@ -77,10 +77,10 @@ export default function CandidatePage() {
               Email your completed form to:
             </p>
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href={`mailto:${campaignEmail}`}
               className="text-lg font-semibold text-brand-700 hover:text-brand-800 underline-offset-2 hover:underline"
             >
-              {SUPPORT_EMAIL}
+              {campaignEmail}
             </a>
           </div>
 
@@ -127,7 +127,7 @@ export default function CandidatePage() {
             />
           </div>
           <Image
-            src="/burnaby-south-metrotown-map.png"
+            src={bnsMapImagePath}
             alt="Map of the Burnaby South–Metrotown electoral district"
             width={1200}
             height={900}

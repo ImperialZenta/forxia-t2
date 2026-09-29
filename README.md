@@ -12,6 +12,7 @@ Professional consulting website built with **Next.js 15**, **Tailwind CSS**, **S
 | `/contact` | Contact form (name, email, service interest, message) |
 | `/services/success` | Post-checkout thank-you page |
 | `/candidate` | Standalone nomination-signature landing (not in nav, `noindex`; direct link only) |
+| `/nomination` | Minimal nomination message + form + BNS map (not in nav, `noindex`; direct link only) |
 
 ## Local development
 
