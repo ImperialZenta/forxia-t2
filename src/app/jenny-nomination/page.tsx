@@ -22,7 +22,9 @@ export default function JennyNominationPage() {
           <p className="text-sm font-semibold uppercase tracking-wider text-gold-400">
             British Columbia provincial election
           </p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Nomination</h1>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            Jenny Yamagata Nomination
+          </h1>
         </div>
       </header>
 
@@ -45,7 +47,7 @@ export default function JennyNominationPage() {
               alt="Jenny Yamagata, OneBC candidate for Burnaby North"
               width={1024}
               height={1024}
-              className="h-auto w-full max-w-xl rounded-lg border border-navy-200 shadow-sm"
+              className="h-auto w-1/2 rounded-lg border border-navy-200 shadow-sm"
               priority
             />
           </div>
