@@ -8,10 +8,17 @@ import {
 } from "@/lib/jenny-campaign";
 
 export const metadata: Metadata = {
-  title: "Nomination — Jenny Yamagata",
+  title: {
+    absolute: "Jenny Yamagata Nomination",
+  },
   description:
     "Ballot access for Jenny Yamagata in Burnaby North — BC provincial election.",
   robots: { index: false },
+  openGraph: {
+    title: "Jenny Yamagata Nomination",
+    description:
+      "Ballot access for Jenny Yamagata in Burnaby North — BC provincial election.",
+  },
 };
 
 export default function JennyNominationPage() {
@@ -88,7 +95,7 @@ export default function JennyNominationPage() {
           <p className="text-sm text-navy-500">Jenny Yamagata — Burnaby North</p>
           <Image
             src={jennyNominationQrImagePath}
-            alt="QR code linking to the nomination form"
+            alt="QR code linking to https://www.forxia.com/jenny-nomination"
             width={256}
             height={256}
             className="mt-2 h-56 w-56 sm:h-64 sm:w-64"
