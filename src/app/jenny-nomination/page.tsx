@@ -93,6 +93,9 @@ export default function JennyNominationPage() {
             height={256}
             className="mt-2 h-56 w-56 sm:h-64 sm:w-64"
           />
+          <p className="text-sm text-navy-500">
+            This is unpaid personal expression provided by Andrew Rose
+          </p>
         </div>
       </footer>
     </div>
