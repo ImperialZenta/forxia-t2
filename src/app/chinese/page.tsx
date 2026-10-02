@@ -8,9 +8,15 @@ import {
 } from "@/lib/candidate-campaign";
 
 export const metadata: Metadata = {
-  title: "候选人提名 — Andrew Rose",
+  title: {
+    absolute: "候选人提名 — Andrew Rose",
+  },
   description: "Andrew Rose 争取在卑诗省省选本拿比南-铁道镇选区登上选票。",
   robots: { index: false },
+  openGraph: {
+    title: "候选人提名 — Andrew Rose",
+    description: "Andrew Rose 争取在卑诗省省选本拿比南-铁道镇选区登上选票。",
+  },
 };
 
 export default function ChineseNominationPage() {
