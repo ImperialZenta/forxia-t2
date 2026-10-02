@@ -15,6 +15,7 @@ Professional consulting website built with **Next.js 15**, **Tailwind CSS**, **S
 | `/nomination` | Minimal nomination message + form + BNS map (not in nav, `noindex`; direct link only) |
 | `/chinese` | Simplified Chinese version of the nomination page (not in nav, `noindex`; direct link only) |
 | `/jenny-nomination` | Jenny Yamagata nomination landing for Burnaby North (not in nav, `noindex`; direct link only) |
+| `/deding-nomination` | De Ding nomination landing for Burnaby East (not in nav, `noindex`; direct link only) |
 
 ## Local development
 
