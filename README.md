@@ -11,12 +11,6 @@ Professional consulting website built with **Next.js 15**, **Tailwind CSS**, **S
 | `/services` | Packages with Stripe checkout or contact CTAs |
 | `/contact` | Contact form (name, email, service interest, message) |
 | `/services/success` | Post-checkout thank-you page |
-| `/candidate` | Standalone nomination-signature landing (not in nav, `noindex`; direct link only) |
-| `/nomination` | Minimal nomination message + form + BNS map (not in nav, `noindex`; direct link only) |
-| `/chinese` | Simplified Chinese version of the nomination page (not in nav, `noindex`; direct link only) |
-| `/jenny-nomination` | Jenny Yamagata nomination landing for Burnaby North (not in nav, `noindex`; direct link only) |
-| `/jenny-chinese` | Simplified Chinese version of Jenny Yamagata’s nomination page (not in nav, `noindex`; direct link only) |
-| `/deding-nomination` | De Ding nomination landing for Burnaby East (not in nav, `noindex`; direct link only) |
 
 ## Local development
 
